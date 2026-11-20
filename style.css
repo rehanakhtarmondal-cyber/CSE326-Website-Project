@@ -1,0 +1,457 @@
+/* BASIC PAGE SETTINGS */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #17212b;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background-color: #101c2b;
+    color: white;
+    padding: 20px 7%;
+    text-align: center;
+}
+
+.logo, .footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.logo span, .footer-logo span {
+    color: #f5a623;
+}
+
+nav a {
+    color: #e7edf4;
+    text-decoration: none;
+    margin: 8px 12px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #f5a623;
+}
+
+/* HOME SECTION */
+.hero {
+    background-color: #14263a;
+    color: white;
+    padding: 75px 8%;
+    min-height: 390px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.small-heading, .section-tag {
+    color: #f5a623;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #f5a623;
+}
+
+.hero-text {
+    color: #c6d0dc;
+    line-height: 1.7;
+    max-width: 560px;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: #f5a623;
+    color: #17212b;
+    text-decoration: none;
+    padding: 14px 22px;
+    margin-top: 18px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.main-button:hover {
+    background-color: white;
+}
+
+.hero-side {
+    position: absolute;
+    right: 9%;
+    top: 65px;
+    text-align: center;
+    color: #aebdcd;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.ball {
+    font-size: 125px;
+    animation: moveBall 3s infinite alternate;
+}
+
+@keyframes moveBall {
+    from { transform: rotate(-12deg) translateY(0); }
+    to { transform: rotate(12deg) translateY(-15px); }
+}
+
+/* COMMON SECTION STYLE */
+.section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin: 12px 0;
+    color: #14263a;
+}
+
+.section-intro {
+    color: #687583;
+    margin-bottom: 35px;
+}
+
+/* LEAGUE CARDS */
+.league-list {
+    text-align: center;
+}
+
+.league-card {
+    display: inline-block;
+    background-color: white;
+    width: 215px;
+    min-height: 190px;
+    padding: 22px 12px;
+    margin: 10px;
+    border: 1px solid #e3e8ed;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(20, 38, 58, 0.06);
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+.league-card:hover, .team-card:hover, .player-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.league-icon {
+    background-color: #14263a;
+    color: #f5a623;
+    width: 52px;
+    padding: 16px 5px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.league-card h3, .team-card h3, .player-card h3 {
+    margin: 10px 0 6px;
+    font-size: 16px;
+}
+
+.league-card p, .team-card p, .player-card p {
+    color: #74808c;
+    font-size: 13px;
+    margin: 5px 0 12px;
+}
+
+.league-card span {
+    color: #d18a16;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* TEAMS */
+.dark-section {
+    background-color: #101c2b;
+}
+
+.dark-section h2 {
+    color: white;
+}
+
+.dark-section .section-intro {
+    color: #aebdcd;
+}
+
+.team-card {
+    display: inline-block;
+    background-color: #1b2b3e;
+    color: white;
+    width: 205px;
+    padding: 22px 10px;
+    margin: 9px;
+    border: 1px solid #31445a;
+    border-radius: 8px;
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+.team-card p {
+    color: #aebdcd;
+}
+
+.team-badge {
+    width: 58px;
+    height: 58px;
+    padding-top: 19px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.madrid { background-color: #4267a9; }
+.barca { background-color: #9b2444; }
+.united { background-color: #c72d35; }
+.city { background-color: #65a9cf; color: #10243a; }
+.liverpool { background-color: #bd2938; }
+.bayern { background-color: #d52d3a; }
+.psg { background-color: #244b8c; }
+.inter { background-color: #15518e; }
+
+/* PLAYER PROFILES */
+.player-card {
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    width: 225px;
+    padding: 25px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #e3e8ed;
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+.player-number {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #dce2e8;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.player-avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    margin: 5px auto 15px;
+    padding-top: 25px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.avatar-one { background-color: #548b9c; }
+.avatar-two { background-color: #8e6047; }
+.avatar-three { background-color: #567d59; }
+.avatar-four { background-color: #536b9d; }
+
+.player-stats {
+    border-top: 1px solid #e6eaee;
+    margin-top: 18px;
+    padding-top: 15px;
+}
+
+.player-stats div {
+    display: inline-block;
+    width: 45%;
+}
+
+.player-stats strong {
+    display: block;
+    color: #14263a;
+    font-size: 20px;
+}
+
+.player-stats small {
+    color: #87919b;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.data-note {
+    color: #89939e;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* POINTS TABLE */
+.table-section {
+    background-color: #eaf0f5;
+}
+
+.table-section label {
+    display: block;
+    margin: 15px 0 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+select {
+    padding: 11px 15px;
+    border: 1px solid #cbd4dd;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+}
+
+th {
+    background-color: #14263a;
+    color: white;
+    padding: 15px 9px;
+    font-size: 11px;
+}
+
+td {
+    padding: 14px 9px;
+    border-bottom: 1px solid #e5e9ed;
+    font-size: 13px;
+}
+
+tr:hover td {
+    background-color: #fff5e4;
+}
+
+/* FIXTURES */
+.fixture {
+    display: inline-block;
+    background-color: #1b2b3e;
+    border: 1px solid #31445a;
+    border-radius: 8px;
+    width: 280px;
+    padding: 23px 12px;
+    margin: 10px;
+    color: white;
+}
+
+.fixture span {
+    color: #f5a623;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.fixture h3 {
+    font-size: 17px;
+}
+
+.fixture h3 b {
+    color: #f5a623;
+    margin: 0 5px;
+}
+
+.fixture p {
+    color: #aebdcd;
+    font-size: 12px;
+}
+
+/* CONTACT FORM */
+.contact-section form {
+    background-color: white;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: left;
+    border: 1px solid #e0e6ec;
+    border-radius: 8px;
+}
+
+.contact-section label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5de;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contact-section textarea {
+    resize: vertical;
+}
+
+.contact-section input[type="submit"] {
+    background-color: #f5a623;
+    color: #17212b;
+    border: none;
+    padding: 13px 20px;
+    margin-top: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-section input[type="submit"]:hover {
+    background-color: #e59612;
+}
+
+#form-message {
+    color: #26764a;
+    font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0b1420;
+    color: #aebdcd;
+    text-align: center;
+    padding: 35px 15px;
+    font-size: 12px;
+}
+
+.footer-logo {
+    color: white;
+    margin-bottom: 8px;
+}
